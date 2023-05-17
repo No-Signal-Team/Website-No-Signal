@@ -1,0 +1,24 @@
+{
+  "name": "website-no-signal",
+  "version": "1.0.0",
+  "description": "The website of the No Signal horror game project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/No-Signal-Team/Website-No-Signal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/No-Signal-Team/Website-No-Signal/issues"
+  },
+  "homepage": "https://github.com/No-Signal-Team/Website-No-Signal#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.5.0"
+  }
+}
