@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/No-Signal-Team/Website-No-Signal#readme",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "express": "^4.18.2",
-    "mongodb": "^5.5.0"
+    "mongodb": "^5.5.0",
+    "react-bootstrap": "^2.7.4",
+    "react-router-dom": "^5.3.4"
   }
 }
