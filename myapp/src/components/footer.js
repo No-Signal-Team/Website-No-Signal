@@ -2,39 +2,36 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { FaDiscord } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 import '../App.css';
 
 function Footer(){
     return <footer className="footer pt-4 secondary">
         <div className="py-2">
             <Row>
-                <Col>
+                <Col lg={4}>
                     <div className="text-center">
-                        <h4>Nos Réseaux sociaux</h4>
-                        <ul>
-                            <li><a href="#insta">Intagram</a></li>
-                            <li><a href="#twitter">Twitter</a></li>
-                            <li><a href="#discord">Discord</a></li>
+                        <h4>Nos Réseaux Sociaux</h4>
+                        <ul className="socials">
+                            <li><a href="#insta"><FaInstagram/> Intagram</a></li>
+                            <li><a href="#twitter"><FaTwitter/> Twitter</a></li>
+                            <li><a href="#discord"><FaDiscord/> Discord</a></li>
                         </ul>
                     </div>
                 </Col>
-                <Col>
+                <Col lg={{ span: 4, offset: 4 }}>
                     <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="text-center mb-3 form-text-title" controlId="formBasicEmail">
                             <Form.Label>Inscrit toi à notre newsletter</Form.Label>
                             <Form.Control type="email" placeholder="Email" />
                         </Form.Group>
-                        {['checkbox'].map((type) => (
-                            <div key={`default-${type}`} className="mb-3">
-                            <Form.Check 
-                                type={type}
-                                id={`default-${type}`}
-                                label={`Deviens beta testeur`}
-                            />
-                            </div>
-                        ))}
-                        <Button variant="primary" type="submit">
-                            Submit
+                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                            <Form.Check type="checkbox" label="Deviens beta testeur" />
+                        </Form.Group>
+                        <Button variant="outline-light" type="submit">
+                            S'inscrire
                         </Button>
                     </Form>
                 </Col>
