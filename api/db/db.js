@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+/*const { MongoClient } = require("mongodb");
 const connectionString =
   "mongodb+srv://aromanzin:noSIgnal@cluster0.1ytvnd0.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(connectionString, {
@@ -23,4 +23,4 @@ module.exports = {
   getDb: function () {
     return dbConnection;
   },
-};
+};*/

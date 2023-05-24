@@ -1,16 +1,26 @@
-const express = require("express");
-const dbo = require("./db/db");
+/*const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
-const port = 4444;
 
-app.get("/", function (req, res) {
-  res.send("Hello World!");
+const uri = 'mongodb+srv://aromanzin:noSIgnal@cluster0.1ytvnd0.mongodb.net/?retryWrites=true&w=majority'
+
+async function connect() {
+  try {
+    await mongoose.connect(uri);
+    console.log("Connected to MongoDB");
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+connect();
+
+app.listen(8000, () => {
+  console.log("Server started on port 8000")
 });
 
-dbo.connectToServer();
-
-app.listen(port, function () {
-  console.log(`App listening on port ${port}!`);
+app.get("/test", function (req, res) {
+  res.send("Hello World!");
 });
 
 app.get("/test/list", function (req, res) {
@@ -26,10 +36,10 @@ app.get("/test/list", function (req, res) {
       } else {
         res.json(result);
       }
-    });
+    });   
 });
 
-/*app.get("/french/list", function (req, res) {
+app.get("/french/list", function (req, res) {
   //on se connecte à la DB MongoDB
   const dbConnect = dbo.getDb();
   //premier test permettant de récupérer mes pokemons !

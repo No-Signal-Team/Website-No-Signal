@@ -4,32 +4,10 @@ import Footer from "../components/footer";
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {getAlle, getAllf} from "../languages.js";
-import {useEffect,useState} from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
 import '../App.css';
 
 function Home(){
-
-    const [ french, setFrench ] = useState([]);
-
-    //va s'executer seulement au lancement du composant (dep: [])
-    useEffect(() => {
-    // récupérer la liste des users seulement au chargement du composant ! 
-    const frenchFetched = getAllf();
-    frenchFetched
-        .then(result => setFrench(result))
-        .catch(error=>console.error("Erreur avec notre API :",error.message));
-    },[]);
-
-    const [ english, setEnglish ] = useState([]);
-
-    useEffect(() => {
-        const englishFetched = getAlle();
-        englishFetched
-            .then(result => setEnglish(result))
-            .catch(error=>console.error("Erreur avec notre API :",error.message));
-        },[]);
 
     return <div className="montserrat">
         <Menu/>
@@ -40,9 +18,9 @@ function Home(){
                 </video>
                 <div className="text-center content">
                     <h1>NO SIGNAL</h1>
-                    <h2>{french.promo}</h2>
+                    <h2>Clip promotionnel du jeu</h2>
                     <p className="content-color">L'heure de l'horreur est arrivée. Préparez vous à un environnement sans merci au Château.</p>
-                    <Button variant="light" size="lg"><FaArrowCircleRight/> {english.button}</Button>{' '}
+                    <Button variant="light" size="lg"><FaArrowCircleRight/> Regarder</Button>{' '}
                 </div>
         </div>
 
