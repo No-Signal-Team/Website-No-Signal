@@ -7,12 +7,22 @@
 .navbar {
   position:fixed;
   background:transparent;
-  z-index: 999;
+  z-index: 998;
 }
 
 .right-nav{
   position: fixed;
   right: 0;
+}
+
+/*Alerts*/
+.alert-fixed {
+  position:fixed; 
+  top: 0px; 
+  left: 0px; 
+  width: 100%;
+  z-index:9999; 
+  border-radius:0px
 }
 
 /*Segment of the main page regarding the video*/

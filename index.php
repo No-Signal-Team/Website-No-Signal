@@ -38,6 +38,22 @@
 
         <?php require "php/components/nav.php"; ?>
 
+        <?php if ((isset($_POST['email'])) || (isset($_POST["sign"]))){
+            require_once "php/queries/newsletter.php";  
+        } else if (isset($_SESSION['newsletter_error'])){ ?>
+        <!-- Error Alert -->
+        <div class="alert alert-danger alert-dismissible fade show alert-fixed">
+            <strong>Error !</strong> <?php echo $_SESSION['newsletter_error']; ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        <?php } else if (isset($_SESSION['success'])){ ?>
+            <!-- Success Alert -->
+            <div class="alert alert-success alert-dismissible fade show alert-fixed">
+            <strong>Success !</strong> <?php echo $_SESSION['success']; ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        <?php } ?>
+
         <div id="home" class="main">
                 <video autoPlay loop muted id='video'>
                     <source src='src/video/castle.mp4' type='video/mp4'/>

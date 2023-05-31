@@ -17,26 +17,26 @@ $language = $pre->fetch(PDO::FETCH_ASSOC);
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav">
         <li class="nav-item">
-          <button href="#game" type="button" class="btn btn-secondary button-margin"><?php echo $language['nav1'] ?></button>
+          <a class="btn btn-secondary button-margin" href="#game" role="button"><?php echo $language['nav1'] ?></a>
         </li>
         <li class="nav-item">
-          <button href="#us" type="button" class="btn btn-secondary button-margin"><?php echo $language['nav2'] ?></button>
+          <a class="btn btn-secondary button-margin" href="#us" role="button"><?php echo $language['nav2'] ?></a>
         </li>
         <li class="nav-item">
-          <button href="#team" type="button" class="btn btn-secondary button-margin"><?php echo $language['nav3'] ?></button>
+        <a class="btn btn-secondary button-margin" href="#team" role="button"><?php echo $language['nav3'] ?></a>
         </li>
       </ul>
       <ul class="nav right-nav">
         <li class="nav-item">
-          <button href="#" type="button" class="btn btn-light button-margin"><?php echo $language['download'] ?></button>
+          <a class="btn btn-light button-margin" href="#" role="button"><?php echo $language['download'] ?></a>
         </li>
-        <li class="nav-item">
-          <div class="btn-group button-margin" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-            <label class="btn btn-outline-light" for="btnradio1">FR</label>
+        <li class="nav-item button-margin">
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+              <input type="radio" class="btn-check" name="radio" id="french" autocomplete="off" checked>
+              <label class="btn btn-outline-light" for="french">FR</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-            <label class="btn btn-outline-light" for="btnradio2">EN</label>
+              <input type="radio" class="btn-check" name="radio" id="english" autocomplete="off">
+              <label class="btn btn-outline-light" for="english">EN</label>
           </div>
         </li>
       </ul>
