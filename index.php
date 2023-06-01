@@ -1,44 +1,44 @@
-<?php require_once "php/config/config.php"; ?>
+<?php require_once "php/config/config.php";?>
 
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
 
-        <!-- IMPORT FONTS -->
+        <!-- Import fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-        <!-- BOOTSTRAP CSS -->
+        <!-- Bootsrap css -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-        <!-- NOTRE CSS -->
+        <!-- Our css -->
         <link rel="stylesheet" href="src/css/style.css">
 
-        <!-- LE NAVIGATEUR SAIT QUE LE SITE EST OPTIMISE SUR MOBILE -->
+        <!-- Browser knows the website is optimised for mobile -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- DESCRIPTION POUR LE NAVIGATEUR -->
-        <meta name="description" content="">
+        <!-- Browser's description of the website -->
+        <meta name="description" content="Website for the horror game by No Signal Studio">
 
-        <!-- CONFIGURATION DE LA TAB DANS LE NAVIGATEUR -->
-        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/90/90394.png">
+        <!-- Tab configuration in browser -->
+        <link rel="icon" href="src/img/castle.png">
         <title>No Signal</title>
     </head>
 
-    <?php
-    $sql = "SELECT * FROM language";
-    $pre = $pdo->prepare($sql);
-    $pre->execute();
-    $language = $pre->fetch(PDO::FETCH_ASSOC);
-    ?>
-
     <body>
 
-        <?php require "php/components/nav.php"; ?>
+        <?php 
+        
+        // Call the function to switch language
+        require "php/queries/lang.php";
 
-        <?php if ((isset($_POST['email'])) || (isset($_POST["sign"]))){
+        // Call the fonction for the navbar
+        require "php/components/nav.php";
+
+        // Verification for the newsletter's form
+        if ((isset($_POST['email'])) || (isset($_POST["sign"]))){
             require_once "php/queries/newsletter.php";  
         } else if (isset($_SESSION['newsletter_error'])){ ?>
         <!-- Error Alert -->
@@ -47,13 +47,14 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
         <?php } else if (isset($_SESSION['success'])){ ?>
-            <!-- Success Alert -->
-            <div class="alert alert-success alert-dismissible fade show alert-fixed">
+        <!-- Success Alert -->
+        <div class="alert alert-success alert-dismissible fade show alert-fixed">
             <strong>Success !</strong> <?php echo $_SESSION['success']; ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
         <?php } ?>
 
+        <!-- Main section -->
         <div id="home" class="main">
                 <video autoPlay loop muted id='video'>
                     <source src='src/video/castle.mp4' type='video/mp4'/>
@@ -66,16 +67,19 @@
                 </div>
         </div>
 
+        <!-- Section about the game -->
         <div id="game">
             <h3 class="sub-titles"><?php echo $language['nav1'] ?></h3>
             <div class="game"></div>
         </div>
 
+        <!-- Section about us -->
         <div id="us">
             <h3 class="sub-titles"><?php echo $language['nav2'] ?></h3>
             <div class="us"></div>
         </div>
 
+        <!-- Section about the team -->
         <div id="team">
             <div class="team row">
                 <div class="col">
@@ -83,20 +87,21 @@
                     <h4 class="team-subt"><?php echo $language['teamsub'] ?></h4>
                 </div>
                 <div class="col">
-                    <img class="team-img" src="https://fivestarexperiences.com.au/wp-content/uploads/2018/04/Happy-team.jpg" alt="team"/>
+                    <img class="team-img" src="src/img/team.jpg" alt="team"/>
                 </div>
             </div>
         </div>
 
+        <!-- Call the fonction for the footer -->
         <?php require "php/components/footer.php"; ?>
 
-        <!-- JQUERY -->
+        <!-- Import Jquery -->
         <script src="script/jquery.min.js"></script>
-        <!-- BOOTSRAP JS -->
+        <!-- Bootstrap js -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <!-- ICONIFY -->
+        <!-- Iconify -->
         <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-        <!-- NOTRE JS -->
+        <!-- Our js -->
         <script src="src/script/script.js"></script>
         
     </body>

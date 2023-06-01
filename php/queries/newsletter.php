@@ -8,16 +8,16 @@ $pre = $pdo->prepare($sql);
 $pre->execute();
 $queries = $pre->fetchAll();
 foreach($queries as $newsletter){
-    // RENVOYER UN MESSAGE D'ERREUR SI L'EMAIL EST DEJA DANS LA BDD
+    // Send back an error message if the email is already in the db
     if ($email == $newsletter['email']){
-        $_SESSION['newsletter_error'] = "Vous êtes déjà inscrit à la newsletter";
+        $_SESSION['newsletter_error'] = "You already subscribed to the newsletter";
         header('Location:index.php');
         exit();
     }
 }
 
 unset($_SESSION['newsletter_error']);
-// INSERER LE NOUVEL UTILISATEUR A LA BDD
+// Insert the email in the db
 $sql = "INSERT INTO newsletter(email) VALUES(:email)";
 $dataBinded=array(
     ':email'   => $email,
@@ -26,8 +26,8 @@ $dataBinded=array(
 $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
-// RENVOYER UN MESSAGE SI L'UTILISATEUR A ETE AJOUTER A LA BDD
-$_SESSION['success'] = "Vous avez été inscrit avec succès";
+// Send back a success message if the email was added to the db
+$_SESSION['success'] = "You are now subscrided to our neawsletter";
 header('Location:index.php');
 exit();
 ?>

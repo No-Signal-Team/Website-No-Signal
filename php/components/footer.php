@@ -1,13 +1,9 @@
-<?php require_once "php/config/config.php";
-
-$sql = "SELECT * FROM language";
-$pre = $pdo->prepare($sql);
-$pre->execute();
-$language = $pre->fetch(PDO::FETCH_ASSOC); ?>
+<?php require_once "php/config/config.php";?>
 
 <footer class="footer pt-4 secondary">
     <div class="row py-2">
         <div class="col-4 text-center">
+            <!-- Our social medias -->
             <h4><?php echo $language['socials'] ?></h4>
             <ul class="socials">
                 <li><a href="#insta"><iconify-icon icon="mdi:instagram"></iconify-icon> Intagram</a></li>
@@ -15,7 +11,9 @@ $language = $pre->fetch(PDO::FETCH_ASSOC); ?>
                 <li><a href="#discord"><iconify-icon icon="ic:baseline-discord"></iconify-icon> Discord</a></li>
             </ul>
         </div>
+        
         <div class="col-4 offset-4 text-center">
+            <!-- Newsletter form -->
             <form class="input-width" method="post" action="index.php">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label"><?php echo $language['newsletter'] ?></label>
@@ -25,6 +23,7 @@ $language = $pre->fetch(PDO::FETCH_ASSOC); ?>
             </form>
         </div>
 
+        <!-- Copyright -->
         <p class="text-center pt-4">No Signal © 2023 Copyright</p>
     </div>
 </footer>
