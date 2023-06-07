@@ -23,7 +23,7 @@
         <meta name="description" content="Website for the horror game by No Signal Studio">
 
         <!-- Tab configuration in browser -->
-        <link rel="icon" href="src/img/castle.png">
+        <link rel="icon" href="src/img/logo.png">
         <title>No Signal</title>
     </head>
 

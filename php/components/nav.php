@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <!-- Game Logo -->
     <a class="navbar-brand" href="#home">
-      <img src="src/img/castle.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="src/img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-center">
     </a>
     <!-- Navbar content -->
     <div class="collapse navbar-collapse" id="navbarNav">
