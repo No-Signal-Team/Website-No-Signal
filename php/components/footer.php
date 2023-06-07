@@ -1,10 +1,10 @@
 <?php require_once "php/config/config.php";?>
 
-<footer class="footer pt-4 secondary">
+<footer class="footer pt-4">
     <div class="row py-2">
-        <div class="col-4 text-center">
+        <div class="col-lg-6 col-sm-12 text-center">
             <!-- Our social medias -->
-            <h4><?php echo $language['socials'] ?></h4>
+            <h4 class="bebas-neue"><?php echo $language['socials'] ?></h4>
             <ul class="socials">
                 <li><a href="#insta"><iconify-icon icon="mdi:instagram"></iconify-icon> Intagram</a></li>
                 <li><a href="#twitter"><iconify-icon icon="mdi:twitter"></iconify-icon> Twitter</a></li>
@@ -12,12 +12,12 @@
             </ul>
         </div>
         
-        <div class="col-4 offset-4 text-center">
+        <div class="col-lg-6 col-sm-12 text-center">
             <!-- Newsletter form -->
-            <form class="input-width" method="post" action="index.php">
+            <form method="post" action="index.php">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label"><?php echo $language['newsletter'] ?></label>
-                    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    <input name="email" type="email" class="form-control input-params" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                 </div>
                 <button type="submit" class="btn btn-light" name="sign"><?php echo $language['submit'] ?></button>
             </form>

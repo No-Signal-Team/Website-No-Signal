@@ -1,13 +1,88 @@
-/*Navbar*/
+/* Font */
+@font-face {
+  font-family: bebasNeue;
+  src: url("../fonts/BebasNeue-Regular.ttf");
+}
+
+:root {
+  --blue-grey: #2c2d3d;
+  --blue: #708fa0;
+  --red: #bb0015;
+  --grey: #3b3b3b;
+  --bebas-neue: bebasNeue;
+  --raleway: 'Raleway', sans-serif;
+  --barlow: 'Barlow', sans-serif;
+}
+
+/* General */
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: var(--barlow);
+}
+
+.bebas-neue{
+  font-family: var(--bebas-neue);
+}
+
+.raleway{
+  font-family: var(--raleway);
+}
+
+/* Loading Video */
+#video-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#intro-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  animation: fade-in 1s ease-out 8s forwards;
+  overflow: scroll;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Navbar */
 .button-margin{
   margin-left: 5px;
   margin-right: 5px;
 }
 
+.lang-button{
+  margin-right: 25px;
+}
+
 .navbar {
   position:fixed;
   background:transparent;
-  z-index: 998;
+  z-index: 999;
 }
 
 .right-nav{
@@ -15,7 +90,14 @@
   right: 0;
 }
 
-/*Alerts*/
+/* Mobile Navbar */
+.navbar {
+  position:fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+/* Alerts */
 .alert-fixed {
   position:fixed; 
   top: 0px; 
@@ -25,60 +107,138 @@
   border-radius:0px
 }
 
-/*Segment of the main page regarding the video*/
-.main{
+/* Main segement of the page */
+.tv-img{
   width: 100%;
   height: 100vh;
+  background-image: url(../img/tv.png);
+  background-position: center;
 }
 
-video{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media (min-width: 768px) {
+  .content{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
 }
 
-.content{
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
+@media (max-width: 768px) {
+  .content-mobile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
 }
 
 .content-color{
-  color: #808080;
+  color: #cccbcb;
 }
 
-/*Sub Parts General CSS*/
+/* Sub Parts General CSS */
 .sub-titles{
   font-size: 400%;
-  padding-top: 5%;
-  padding-left: 5%;
+  padding-left: 10%;
   color: white;
 }
 
-/* Game */
-#game{
+/* News */
+#news{
+  background-color: var(--grey);
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.news-space{
+  margin-bottom: 3%;
+}
+
+.rec {
+  font-weight: 700;
+  font-size: 200%;
+  color: white;
+  background-color: black;
+  border: black;
+  border-radius: 10px;
+  width: 9rem;
+  padding: 1%;
+  text-align: center;
+  margin-right: 20%;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.news-img{
+  border-radius: 3%;
   width: 100%;
-  height: 1000px;
-  background-color: #282c34;
+}
+
+@media (max-width: 768px) {
+  .news-img-space{
+    margin-bottom: 5%;
+  }
 }
 
 /* Us */
+.us-title{
+  font-size: 400%;
+  padding-left: 10%;
+  color: black;
+}
+
+.us-space{
+  padding-bottom: 5%;
+}
+
+.us-img{
+  margin-right: 20%;
+  width: 200px;
+}
+
 #us{
-  width: 100%;
-  height: 1000px;
-  background-color: #1f1e1e;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: white;
+  color: black;
+}
+
+.img-pilier{
+  width: 300px;
+}
+
+.pillar-title{
+  font-size: 300%;
+  margin-bottom: 5%;
+}
+
+.number{
+  width: 50px;
+  background-color: black;
+  color: white;
 }
 
 /* Team */
 #team{
   width: 100%;
-  background-color: #282c34;
+  background-color: var(--grey);
 }
 
 .team-title{
@@ -101,13 +261,14 @@ video{
 
 /*Footer*/
 .footer{
-  background-color: #1f1e1e;
+  background-color: black;
   color: white;
 }
 
 .socials{
   list-style-type: none;
   font-size: 105%;
+  padding: 0;
 }
 
 .socials a{
@@ -115,6 +276,12 @@ video{
   text-decoration: none;
 }
 
-.input-width{
-  width: 450px;
+form{
+  margin: 0;
+}
+
+.input-params{
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
 }
