@@ -191,6 +191,25 @@
                     </div>
                 </div>
 
+                <div id="#newsletter">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Rejoins notre Newsletter</h3>
+                            <img src="src/img/placeholder.png" alt="">
+                        </div>
+                        <div class="col">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit debitis autem illum quos optio non aliquid. Ad sequi voluptates quisquam ullam vel deleniti consectetur pariatur in, soluta veniam, unde nostrum!</p>
+                            <form method="post" action="index.php">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label"><?php echo $language['newsletter'] ?></label>
+                                    <input name="email" type="email" class="form-control input-params" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                </div>
+                                <button type="submit" class="btn btn-light" name="sign"><?php echo $language['submit'] ?></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Call the fonction for the footer -->
                 <?php require "php/components/footer.php"; ?>
             </main>

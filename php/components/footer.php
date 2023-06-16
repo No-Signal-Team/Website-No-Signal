@@ -6,9 +6,9 @@
             <!-- Our social medias -->
             <h4 class="bebas-neue"><?php echo $language['socials'] ?></h4>
             <ul class="socials">
-                <li><a href="#insta"><iconify-icon icon="mdi:instagram"></iconify-icon> Intagram</a></li>
-                <li><a href="#twitter"><iconify-icon icon="mdi:twitter"></iconify-icon> Twitter</a></li>
-                <li><a href="#discord"><iconify-icon icon="ic:baseline-discord"></iconify-icon> Discord</a></li>
+                <li><a href="#insta"><iconify-icon inline icon="mdi:youtube"></iconify-icon> Youtube</a></li>
+                <li><a href="#twitter"><iconify-icon inline icon="mdi:twitter"></iconify-icon> Twitter</a></li>
+                <li><a href="#discord"><iconify-icon inline icon="mdi:instagram"></iconify-icon> Instagram</a></li>
             </ul>
         </div>
         
@@ -24,6 +24,6 @@
         </div>
 
         <!-- Copyright -->
-        <p class="text-center pt-4">No Signal © 2023 Copyright</p>
+        <p class="text-center p-4">© 2023 No Signal Studio. All Right Reserved</p>
     </div>
 </footer>
