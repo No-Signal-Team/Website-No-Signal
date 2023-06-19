@@ -4,7 +4,7 @@
   <div class="container-fluid">
    <!-- Game Logo -->
    <a class="navbar-brand" href="#home">
-      <img src="src/img/castle.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="src/img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
     </a>
     <!-- Toggle button on mobile -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">

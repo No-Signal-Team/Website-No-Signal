@@ -1,5 +1,3 @@
-<?php require_once "php/config/config.php";?>
-
 <nav class="navbar navbar-expand-lg bebas-neue">
   <div class="container-fluid">
     <!-- Game Logo -->

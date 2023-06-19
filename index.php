@@ -191,20 +191,26 @@
                     </div>
                 </div>
 
+                <!-- Newsletter Section -->
                 <div id="#newsletter">
-                    <div class="row">
-                        <div class="col">
-                            <h3>Rejoins notre Newsletter</h3>
-                            <img src="src/img/placeholder.png" alt="">
+                    <div class="row mb-4">
+                        <div class="col-lg-6 col-md-12">
+                            <h3 class="newsletter-title bebas-neue"><?php echo $language['newsletter'] ?></h3>
+                            <div class="d-flex justify-content-center">
+                                <img class="newsletter-img m-4" src="src/img/placeholder.png" alt="">
+                            </div>
                         </div>
-                        <div class="col">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit debitis autem illum quos optio non aliquid. Ad sequi voluptates quisquam ullam vel deleniti consectetur pariatur in, soluta veniam, unde nostrum!</p>
+                        <div class="col d-flex-column justify-content-center align-self-center">
+                            <p class="m-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit debitis autem illum quos optio non aliquid. Ad sequi voluptates quisquam ullam vel deleniti consectetur pariatur in, soluta veniam, unde nostrum!</p>
                             <form method="post" action="index.php">
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label"><?php echo $language['newsletter'] ?></label>
-                                    <input name="email" type="email" class="form-control input-params" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                <div class="row m-3">
+                                    <div class="col">
+                                        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                    </div>
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-secondary" name="sign"><?php echo $language['submit'] ?></button>
+                                    </div>
                                 </div>
-                                <button type="submit" class="btn btn-light" name="sign"><?php echo $language['submit'] ?></button>
                             </form>
                         </div>
                     </div>
