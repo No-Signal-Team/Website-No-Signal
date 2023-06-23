@@ -84,60 +84,72 @@
                 <div id="news">
                     <div class="row align-items-center news-space">
                         <div class="col-lg-6 col-sm-12"><h3 class="sub-titles bebas-neue"><?php echo $language['actus'] ?></h3></div>
-                        <div class="col-lg-6 col-sm-12 d-flex justify-content-end"><p class="rec raleway"><span class="dot"></span> REC</p></div>
+                        <div class="col-lg-6 col-sm-12 d-flex justify-content-end"><p class="rec raleway">REC <span class="dot"></span></p></div>
                     </div>
                     <div class="row align-items-center justify-content-center">
                         <div class="col-lg-6 col-sm-12">
                             <img class="news-img news-img-space" src="src/img/placeholder.png" alt="">
                         </div>
-                        <div class="col-lg-4 col-sm-12 news-list">
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h4 class="card-text"><?php echo $language['actu1'] ?></h4>
+                        <div class="col-lg-4 col-sm-12 news-mobile">
+                            <div class="row">
+                                <div class="col-6 col-lg-12">
+                                    <div class="card news-card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><?php echo $language['actu1'] ?></h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="src/img/placeholder.png" class="img-fluid rounded-end" alt="...">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <img src="src/img/placeholder.png" class="img-fluid rounded-end" alt="...">
+                                </div>
+                                <div class="col-6 col-lg-12">
+                                    <div class="card news-card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><?php echo $language['actu2'] ?></h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="src/img/placeholder.png" class="img-fluid rounded-end" alt="...">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h4 class="card-title"><?php echo $language['actu2'] ?></h4>
+                            <div class="row">
+                                <div class="col-6 col-lg-12">
+                                    <div class="card news-card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><?php echo $language['actu3'] ?></h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="src/img/placeholder.png" class="img-fluid rounded-end" alt="...">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <img src="src/img/placeholder.png" class="img-fluid rounded-end" alt="...">
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h4 class="card-title"><?php echo $language['actu3'] ?></h4>
+                                <div class="col-6 col-lg-12">
+                                    <div class="card news-card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><?php echo $language['actu4'] ?></h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="src/img/placeholder.png" class="img-fluid rounded-end" alt="...">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <img src="src/img/placeholder.png" class="img-fluid rounded-end" alt="...">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h4 class="card-title"><?php echo $language['actu4'] ?></h4>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="src/img/placeholder.png" class="img-fluid rounded-end" alt="...">
-                                    </div>
-                                </div>
+                                </div>  
                             </div>
                         </div>
                     </div>  
@@ -150,30 +162,30 @@
                         <div class="col d-flex justify-content-end"><img class="us-img" src="src/img/gopro.png" alt=""></div>
                     </div>
                     <h4 class="text-center pillar-title"><?php echo $language['piliers'] ?></h4>
-                    <div class="row us-sapce">
-                        <div class="col text-center">
+                    <div class="row us-space">
+                        <div class="col-6 col-md-3 text-center p-2">
                             <img class="img-pilier" src="src/img/placeholder.png" alt=""><br>
-                            <span class="badge text-bg-dark">1</span>
+                            <span class="badge text-bg-dark m-1">1</span>
                             <h5 class="font-weight-bold"><?php echo $language['pilier1'] ?></h5>
-                            <p><?php echo $language['pdesc1'] ?></p>
+                            <p class="d-none d-md-block"><?php echo $language['pdesc1'] ?></p>
                         </div>
-                        <div class="col text-center">
+                        <div class="col-6 col-md-3 text-center p-2">
                             <img class="img-pilier" src="src/img/placeholder.png" alt=""><br>
-                            <span class="badge text-bg-dark">2</span>
+                            <span class="badge text-bg-dark m-1">2</span>
                             <h5 class="font-weight-bold"><?php echo $language['pilier2'] ?></h5>
-                            <p><?php echo $language['pdesc2'] ?></p>
+                            <p class="d-none d-md-block"><?php echo $language['pdesc2'] ?></p>
                         </div>
-                        <div class="col text-center">
+                        <div class="col-6 col-md-3 text-center p-2">
                             <img class="img-pilier" src="src/img/placeholder.png" alt=""><br>
-                            <span class="badge text-bg-dark">3</span>
+                            <span class="badge text-bg-dark m-1">3</span>
                             <h5 class="font-weight-bold"><?php echo $language['pilier3'] ?></h5>
-                            <p><?php echo $language['pdesc3'] ?></p>
+                            <p class="d-none d-md-block"><?php echo $language['pdesc3'] ?></p>
                         </div>
-                        <div class="col text-center">
+                        <div class="col-6 col-md-3 text-center p-2">
                             <img class="img-pilier" src="src/img/placeholder.png" alt=""><br>
-                            <span class="badge text-bg-dark">4</span>
+                            <span class="badge text-bg-dark m-1">4</span>
                             <h5 class="font-weight-bold"><?php echo $language['pilier4'] ?></h5>
-                            <p><?php echo $language['pdesc4'] ?></p>
+                            <p class="d-none d-md-block"><?php echo $language['pdesc4'] ?></p>
                         </div>
                     </div>
                 </div>
