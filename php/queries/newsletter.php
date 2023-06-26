@@ -17,6 +17,7 @@ foreach($queries as $newsletter){
 }
 
 unset($_SESSION['newsletter_error']);
+
 // Insert the email in the db
 $sql = "INSERT INTO newsletter(email) VALUES(:email)";
 $dataBinded=array(
@@ -27,7 +28,7 @@ $pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
 // Send back a success message if the email was added to the db
-$_SESSION['success'] = "You are now subscrided to our neawsletter";
+$_SESSION['success'] = "You are now subscrided to our newsletter";
 header('Location:index.php');
 exit();
 ?>

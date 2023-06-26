@@ -56,16 +56,18 @@
                     require_once "php/queries/newsletter.php";  
                 } else if (isset($_SESSION['newsletter_error'])){ ?>
                 <!-- Error Alert -->
-                <div class="alert alert-danger alert-dismissible fade show alert-fixed">
+                <div id="newsletterAlert" class="alert alert-danger alert-dismissible fade show alert-fixed">
                     <strong>Error !</strong> <?php echo $_SESSION['newsletter_error']; ?>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
+                <?php unset($_SESSION['newsletter_error']); ?>
                 <?php } else if (isset($_SESSION['success'])){ ?>
                 <!-- Success Alert -->
-                <div class="alert alert-success alert-dismissible fade show alert-fixed">
+                <div id="newsletterAlert" class="alert alert-success alert-dismissible fade show alert-fixed">
                     <strong>Success !</strong> <?php echo $_SESSION['success']; ?>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
+                <?php unset($_SESSION['success']); ?>
                 <?php } ?>
             </header>
 
@@ -73,10 +75,10 @@
                 <!-- Main section -->
                 <div id="home" class="tv-img">
                     <div class="text-center content content-mobile">
-                        <h1 class="bebas-neue">NO SIGNAL</h1>
-                        <h2 class="bebas-neue"><?php echo $language['promo'] ?></h2>
+                        <h1 class="studio-title bebas-neue">NO SIGNAL</h1>
+                        <h2 class="sub-title bebas-neue"><?php echo $language['promo'] ?></h2>
                         <p class="content-color"><?php echo $language['description'] ?></p>
-                        <button type="button" class="btn btn-light btn-lg bebas-neue"><iconify-icon inline icon="majesticons:arrow-up-circle" width="20"></iconify-icon> <?php echo $language['button'] ?></button>
+                        <button type="button" class="watch-btn btn btn-light btn-lg bebas-neue"><iconify-icon inline icon="majesticons:arrow-up-circle" width="25"></iconify-icon> <?php echo $language['button'] ?></button>
                     </div> 
                 </div>
 

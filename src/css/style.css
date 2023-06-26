@@ -98,6 +98,10 @@ body{
   width: 100%;
 }
 
+.mobile-nav-link{
+  font-size: 150%;
+}
+
 /* Alerts */
 .alert-fixed {
   position:fixed; 
@@ -145,7 +149,20 @@ body{
 }
 
 .content-color{
+  font-size: 125%;
   color: #cccbcb;
+}
+
+.studio-title{
+  font-size: 400%;
+}
+
+.sub-title{
+  font-size: 200%;
+}
+
+.watch-btn{
+  font-size: 150%;
 }
 
 /* Sub Parts General CSS */
@@ -235,8 +252,16 @@ body{
   color: black;
 }
 
-.img-pilier{
-  width: 15vh;
+@media (max-width:900px){
+  .img-pilier{
+    width: 15vh;
+  }
+}
+
+@media (min-width:900px){
+  .img-pilier{
+    width: 27vh;
+  }
 }
 
 .pillar-title{
