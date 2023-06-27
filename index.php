@@ -30,9 +30,6 @@
     <body>
 
     <div id="video-container">
-        <video id="intro-video" autoplay muted>
-            <source src="src/video/FINAL.mp4" type="video/mp4">
-        </video>
 
         <div id="content-container">
             <header>
@@ -207,7 +204,7 @@
 
                 <!-- Newsletter Section -->
                 <div id="#newsletter">
-                    <div class="row mb-4">
+                    <div class="row newsletter">
                         <div class="col-lg-6 col-md-12">
                             <h3 class="newsletter-title bebas-neue"><?php echo $language['newsletter'] ?></h3>
                             <div class="d-flex justify-content-center">
