@@ -197,7 +197,7 @@
                             <h4 class="team-subt bebas-neue"><?php echo $language['teamsub'] ?></h4>
                         </div>
                         <div class="col-lg-6 col-sm-12">
-                            <img class="team-img" src="src/img/team.jpg" alt="team"/>
+                            <img class="team-img" src="src/img/placeholder.png" alt="team"/>
                         </div>
                     </div>
                 </div>

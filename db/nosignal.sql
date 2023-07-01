@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Ven 23 Juin 2023 à 10:00
+-- Généré le :  Sam 01 Juillet 2023 à 09:54
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -66,7 +66,7 @@ CREATE TABLE `lang` (
 --
 
 INSERT INTO `lang` (`id`, `promo`, `description`, `nav1`, `nav2`, `nav3`, `teamsub`, `socials`, `newsletter`, `submit`, `download`, `button`, `actus`, `actu1`, `actu2`, `actu3`, `actu4`, `piliers`, `pilier1`, `pdesc1`, `pilier2`, `pdesc2`, `pilier3`, `pdesc3`, `pilier4`, `pdesc4`, `fnewsletter`, `home`, `contact`, `us`) VALUES
-(1, 'Clip promotionnel du jeu', 'L\'heure de l\'horreur est arrivée. Préparez vous à un environnement sans merci au Château.', 'Notre jeu', 'Qui nous sommes', 'Notre équipe', 'Découvrez notre équipe et leurs profils', 'Nos Réseaux Sociaux', 'Inscrit toi à notre newsletter', 'S\'inscrire', 'Télécharger', 'Regarder', 'Nos actualités', 'Actu 1', 'Actu 2', 'Actu 3', 'Actu 4', 'Nos Valeurs', 'Entraide en équipe', 'BLABLABLA', 'Fun et Chill', 'BLABLABLA', 'All one can come', 'BLABLABLA', 'Des locaux wow', 'BLABLABLA', 'Newsletter', 'Acceuil', 'Informations de contact', 'Nous'),
+(1, 'Clip promotionnel du jeu', 'L\'heure de l\'horreur est arrivée. Préparez vous à un environnement sans merci au Château.', 'Notre jeu', 'Qui nous sommes', 'Notre équipe', 'Découvrez notre équipe et leurs profils', 'Nos Réseaux Sociaux', 'Inscris toi à notre newsletter', 'S\'inscrire', 'Télécharger', 'Regarder', 'Nos actualités', 'Actu 1', 'Actu 2', 'Actu 3', 'Actu 4', 'Nos Valeurs', 'Entraide en équipe', 'BLABLABLA', 'Fun et Chill', 'BLABLABLA', 'All one can come', 'BLABLABLA', 'Des locaux wow', 'BLABLABLA', 'Newsletter', 'Acceuil', 'Informations de contact', 'Nous'),
 (2, 'Promotional video of the game', 'Time for horror has come. Prepare yourself for no mercy in the Castle.', 'Our game', 'Who we are', 'Our Team', 'Discover our team and their profiles', 'Our Social Media', 'Subscribe to our newsletter', 'Subscribe', 'Download', 'Watch', 'Our news', 'News 1', 'News 2', 'News 3', 'News 4', 'Our Values', 'Teamwork', 'BLABLABLA', 'Fun and Chill', 'BLABLABLA', 'All one can come', 'BLABLABLA', 'Wow Locals', 'BLABLABLA', 'Newsletter', 'Home', 'Contact informations', 'Us');
 
 -- --------------------------------------------------------
@@ -88,7 +88,8 @@ INSERT INTO `newsletter` (`id`, `email`) VALUES
 (1, 'exemple@email.com'),
 (2, 'autreexemple@email.com'),
 (7, 'jesuisunexemple@gmail.com'),
-(8, 'thomasdelorme56@gmail.com');
+(8, 'thomasdelorme56@gmail.com'),
+(9, 'anaelle.romanzin@gmail.com');
 
 --
 -- Index pour les tables exportées
@@ -119,7 +120,7 @@ ALTER TABLE `lang`
 -- AUTO_INCREMENT pour la table `newsletter`
 --
 ALTER TABLE `newsletter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
