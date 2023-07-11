@@ -18,38 +18,35 @@
         </li>
       </ul>
       <ul class="nav right-nav">
-        <li class="nav-item">
-          <a class="btn btn-light btn-lg button-margin" href="src/file/cdc.docx" role="button" download><?php echo $language['download'] ?></a>
-        </li>
         <!-- French and english button switch -->
-        <li class="nav-item button-margin lang-button">
+        <li class="nav-item button-margin lang-toggle">
           <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
             <!-- Having the default buttons shown -->
             <?php if (array_key_exists('french', $_POST) == false && array_key_exists('english', $_POST) == false){ ?>
               <form method="post">
                 <input type="submit" class="btn-check" name="french" id="french" autocomplete="off">
-                <label class="btn btn-light btn-lg" for="french">FR</label>
+                <label class="btn btn-light btn-lg selected-lang-button" for="french">FR</label>
 
                 <input type="submit" class="btn-check" name="english" id="english" autocomplete="off">
-                <label class="btn btn-outline-light btn-lg" for="english">EN</label>
+                <label class="btn btn-outline-light btn-lg lang-button" for="english">EN</label>
               </form>
             <!-- Showing french as selected if the website is in french -->
             <?php } else if (array_key_exists('french', $_POST)){ ?>
               <form method="post">
                 <input type="submit" class="btn-check" name="french" id="french" autocomplete="off">
-                <label class="btn btn-light btn-lg" for="french">FR</label>
+                <label class="btn btn-light btn-lg selected-lang-button" for="french">FR</label>
 
                 <input type="submit" class="btn-check" name="english" id="english" autocomplete="off">
-                <label class="btn btn-outline-light btn-lg" for="english">EN</label>
+                <label class="btn btn-outline-light btn-lg lang-button" for="english">EN</label>
               </form>
             <!-- Showing english as selected if the website is in english -->
             <?php } else if (array_key_exists('english', $_POST)){ ?>
               <form method="post">
               <input type="submit" class="btn-check" name="french" id="french" autocomplete="off">
-              <label class="btn btn-outline-light btn-lg" for="french">FR</label>
+              <label class="btn btn-outline-light btn-lg lang-button" for="french">FR</label>
 
               <input type="submit" class="btn-check" name="english" id="english" autocomplete="off">
-              <label class="btn btn-light btn-lg" for="english">EN</label>
+              <label class="btn btn-light btn-lg selected-lang-button" for="english">EN</label>
             </form>
             <?php } ?>
           </div>

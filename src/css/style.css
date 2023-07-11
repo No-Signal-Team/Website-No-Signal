@@ -79,7 +79,7 @@ body{
   margin-right: 5px;
 }
 
-.lang-button{
+.lang-toggle{
   margin-right: 25px;
 }
 
@@ -92,6 +92,16 @@ body{
 .right-nav{
   position: fixed;
   right: 0;
+}
+
+.lang-button:hover{
+  background-color: #adb5bd !important;
+  border-color: #adb5bd !important;
+}
+
+.selected-lang-button:hover{
+  background-color: #dee2e6 !important;
+  border-color: #dee2e6 !important;
 }
 
 /* Mobile Navbar */
@@ -168,7 +178,7 @@ body{
   font-size: 150%;
 }
 
-/* Sub Parts General CSS */
+/* Sub Titles General CSS */
 .sub-titles{
   font-size: 400%;
   padding-left: 10%;
@@ -308,23 +318,43 @@ body{
   color: white;
 }
 
+.team-subt{
+  color: white;
+  padding-top: 7%;
+  padding-left: 10%;
+  font-size: 250%;
+}
+
+.team-text{
+  color: white;
+  padding-left: 10%;
+  font-size: 150%;
+}
+
+.team-img{
+  height: 100%;
+  width: 100%;
+}
+
 @media (max-width:768px){
   .team-title{
     font-size: 400%;
     text-align: center;
     padding-left: 0;
   }
-}
 
-.team-subt{
-  color: white;
-  padding-top: 1%;
-  padding-left: 10%;
-}
+  .team-subt{
+    font-size: 200%;
+    padding-left: 5%;
+  }
 
-.team-img{
-  height: 100%;
-  width: 100%;
+  .team-text{
+    font-size: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+    text-align: justify;
+  }
 }
 
 /* Newsletter */
@@ -343,6 +373,10 @@ body{
     font-size: 400%;
     text-align: center;
     padding-left: 0;
+  }
+
+  .newsletter-text{
+    text-align: justify;
   }
 }
 

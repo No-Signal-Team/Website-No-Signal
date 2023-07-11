@@ -195,6 +195,7 @@
                         <div class="col-lg-6 col-sm-12">
                             <h3 class="team-title bebas-neue"><?php echo $language['nav3'] ?></h3>
                             <h4 class="team-subt bebas-neue"><?php echo $language['teamsub'] ?></h4>
+                            <p class="team-text"><?php echo $language['teamsubtext'] ?></p>
                         </div>
                         <div class="col-lg-6 col-sm-12">
                             <img class="team-img" src="src/img/placeholder.png" alt="team"/>
@@ -212,7 +213,7 @@
                             </div>
                         </div>
                         <div class="col d-flex-column justify-content-center align-self-center">
-                            <p class="m-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit debitis autem illum quos optio non aliquid. Ad sequi voluptates quisquam ullam vel deleniti consectetur pariatur in, soluta veniam, unde nostrum!</p>
+                            <p class="newsletter-text m-4"><?php echo $language['newslettertext'] ?></p>
                             <form method="post" action="index.php">
                                 <div class="row m-3">
                                     <div class="col">
